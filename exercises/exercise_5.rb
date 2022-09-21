@@ -10,3 +10,12 @@ puts 'Exercise 5'
 puts '----------'
 
 # Your code goes here ...
+
+@all_revenue = Store.sum(:annual_revenue)
+
+@count_all = Store.count(:annual_revenue)
+
+@average_all = @all_revenue / @count_all
+
+puts @average_all
+puts Store.where(Store.arel_table[:annual_revenue].gt(1000000)).count
