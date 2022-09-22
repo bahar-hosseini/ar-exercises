@@ -12,3 +12,8 @@ puts 'Exercise 7'
 puts '----------'
 
 # Your code goes here ...
+puts 'Please Insert a name'
+user_input = gets.chomp
+
+@store6 = Store.(name: user_input)
+puts @store6
